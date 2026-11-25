@@ -1,3 +1,4 @@
+stack: node
 timeout_seconds: 900
 start_command: cd frontend && npm install && node server.js
 ready_command: "node -e \"require('http').get('http://127.0.0.1:8000/', r => process.exit(r.statusCode < 400 ? 0 : 1)).on('error', () => process.exit(1))\""
