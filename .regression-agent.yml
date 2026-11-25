@@ -1,0 +1,6 @@
+timeout_seconds: 900
+start_command: python app.py
+ready_command: python -c "import urllib.request; urllib.request.urlopen('http://127.0.0.1:8000/')"
+browser:
+  base_url: http://127.0.0.1:8000
+  max_pages: 10
