@@ -1,6 +1,6 @@
 timeout_seconds: 900
-start_command: python app.py
-ready_command: python -c "import urllib.request; urllib.request.urlopen('http://127.0.0.1:8000/')"
+start_command: cd frontend && npm install && node server.js
+ready_command: "node -e \"require('http').get('http://127.0.0.1:8000/', r => process.exit(r.statusCode < 400 ? 0 : 1)).on('error', () => process.exit(1))\""
 browser:
   base_url: http://127.0.0.1:8000
   max_pages: 10
